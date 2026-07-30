@@ -1,0 +1,28 @@
+import { NavLink, Outlet } from "react-router-dom";
+
+const App = () => (
+  <div className="site-shell">
+    <header className="site-header">
+      <NavLink className="wordmark" to="/" aria-label="Mustafa's portfolio home">
+        <span className="prompt">&gt;_</span> mustafa.dev
+      </NavLink>
+      <nav aria-label="Primary navigation">
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+      </nav>
+    </header>
+
+    <main><Outlet /></main>
+
+    <footer className="site-footer">
+      <p>© {new Date().getFullYear()} Mustafa. Built with care.</p>
+      <div className="social-links" aria-label="Social links">
+        <a href="https://github.com/MidfieId" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/elmustafa-ahmed-62b24222a" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:elmustafa.eltayeb@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+);
+
+export default App;
