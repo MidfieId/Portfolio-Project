@@ -1,7 +1,18 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { getProject } from "./data/projects";
 
-const App = () => (
-  <div className="site-shell">
+const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const projectSlug = pathname.split("/")[2];
+    const project = projectSlug ? getProject(projectSlug) : undefined;
+    const pageTitle = pathname === "/" ? "Software Engineer" : project ? project.title : pathname === "/projects" ? "Projects" : "Page not found";
+    document.title = `Mustafa Eltayeb | ${pageTitle}`;
+  }, [pathname]);
+
+  return <div className="site-shell">
     <header className="site-header">
       <NavLink className="wordmark" to="/" aria-label="Mustafa's portfolio home">
         <span className="prompt">&gt;_</span> mustafa.dev
@@ -22,7 +33,7 @@ const App = () => (
         <a href="mailto:elmustafa.eltayeb@gmail.com">Email</a>
       </div>
     </footer>
-  </div>
-);
+  </div>;
+};
 
 export default App;
