@@ -9,13 +9,13 @@ const App = () => {
     const projectSlug = pathname.split("/")[2];
     const project = projectSlug ? getProject(projectSlug) : undefined;
     const pageTitle = pathname === "/" ? "Software Engineer" : project ? project.title : pathname === "/projects" ? "Projects" : "Page not found";
-    document.title = `Mustafa Eltayeb | ${pageTitle}`;
+    document.title = `Elmustafa Eltayeb | ${pageTitle}`;
   }, [pathname]);
 
   return <div className="site-shell">
     <header className="site-header">
-      <NavLink className="wordmark" to="/" aria-label="Mustafa's portfolio home">
-        <span className="prompt">&gt;_</span> mustafa.dev
+      <NavLink className="wordmark" to="/" aria-label="Elmustafa's portfolio home">
+        <span className="prompt">&gt;_</span> elmustafa.dev
       </NavLink>
       <nav aria-label="Primary navigation">
         <NavLink to="/" end>Home</NavLink>
@@ -26,7 +26,7 @@ const App = () => {
     <main><Outlet /></main>
 
     <footer className="site-footer">
-      <p>© {new Date().getFullYear()} Mustafa. Built with care.</p>
+      <p>© {new Date().getFullYear()} Elmustafa. Built with care.</p>
       <div className="social-links" aria-label="Social links">
         <a href="https://github.com/MidfieId" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/elmustafa-ahmed-62b24222a" target="_blank" rel="noreferrer">LinkedIn</a>

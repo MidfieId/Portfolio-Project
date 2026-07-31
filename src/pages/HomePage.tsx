@@ -12,15 +12,10 @@ const skillGroups = [
 export const HomePage = () => (
   <>
     <section className="hero section-wrap">
-      <p className="eyebrow">HELLO_WORLD</p>
+      <p className="eyebrow">01 / ABOUT</p>
       <h1>Software Engineer<br /><span>&amp; aspiring data analyst.</span></h1>
-      <p className="hero-copy">Full-stack developer focused on maintainable web applications, reliable business systems, and thoughtful user experiences.</p>
+      <p className="hero-copy">I’m Elmustafa, a software developer based in Al Ain, UAE, focused on maintainable web applications, reliable business systems, and thoughtful user experiences. I enjoy clear problem-solving and delivering practical software that people can rely on.</p>
       <div className="hero-actions"><Link className="button-link" to="/projects">Browse projects <span aria-hidden="true">→</span></Link><a className="text-link" href="#contact">Get in touch</a></div>
-    </section>
-
-    <section className="section-wrap split-section" id="about">
-      <div><p className="eyebrow">01 / ABOUT</p><h2>A little about me.</h2></div>
-      <p className="body-copy">I’m a software developer based in Al Ain, UAE, with experience developing responsive applications, backend services, and SQL-backed systems. I enjoy clear problem-solving, maintainable code, and delivering practical software that people can rely on.</p>
     </section>
 
     <section className="section-wrap" id="skills">
